@@ -4,16 +4,15 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "11.0.0",
-    "npm": "6.4.1"
+    "node": "12.0.0",
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "cd frontend && npm install --only=dev && npm install && npm run build && cd .. && node index.js",
     "server": "nodemon index.js",
     "frontend": "npm run start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "create-react": "npm create-react-app frontend",
-    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build && cd .. && node index.js"
   },
   "author": "",
   "license": "ISC",
