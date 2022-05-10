@@ -42,13 +42,13 @@ class FlightForm extends Component {
   //   location.href = '/flights'
   // }
 
-  getResults = async (event) => {
-    event.preventDefault()
-    console.log("hello");
-    const response = await fetch('http://localhost:5000/api/create-session', { method: 'POST' });
-    const sessionKey = await response;
-    await console.log("sessionKey",sessionKey); 
-  }
+  // getResults = async (event) => {
+  //   event.preventDefault()
+  //   console.log("hello");
+  //   const response = await fetch('http://localhost:5000/api/create-session', { method: 'POST' });
+  //   const sessionKey = await response;
+  //   await console.log("sessionKey",sessionKey); 
+  // }
 
   render() {
     return (
